@@ -264,7 +264,7 @@ class ContributorDashboard extends StatelessWidget {
                     const SizedBox(height: 12),
                     ElevatedButton(
                       onPressed: () {
-                        if (onNavigateTab != null) onNavigateTab!(0);
+                        if (onNavigateTab != null) onNavigateTab!(1);
                       },
                       child: Text(
                         isSi ? 'දාන දිනදර්ශනය බලන්න' : 'View Alms Calendar',
@@ -288,7 +288,7 @@ class ContributorDashboard extends StatelessWidget {
                   icon: Icons.calendar_month,
                   color: AppColors.saffronPrimary,
                   onTap: () {
-                    if (onNavigateTab != null) onNavigateTab!(0);
+                    if (onNavigateTab != null) onNavigateTab!(1);
                   },
                 ),
               ),

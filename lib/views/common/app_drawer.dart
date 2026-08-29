@@ -144,16 +144,16 @@ class AppDrawer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 8),
               children: [
                 ListTile(
-                  leading: const Icon(Icons.calendar_month, color: AppColors.saffronPrimary),
-                  title: Text(context.tr('tab_calendar')),
+                  leading: const Icon(Icons.dashboard_outlined, color: AppColors.saffronPrimary),
+                  title: Text(context.tr('tab_dashboard')),
                   onTap: () {
                     Navigator.pop(context);
                     if (onSelectTab != null) onSelectTab!(0);
                   },
                 ),
                 ListTile(
-                  leading: const Icon(Icons.dashboard_outlined, color: AppColors.saffronPrimary),
-                  title: Text(context.tr('tab_dashboard')),
+                  leading: const Icon(Icons.calendar_month, color: AppColors.saffronPrimary),
+                  title: Text(context.tr('tab_calendar')),
                   onTap: () {
                     Navigator.pop(context);
                     if (onSelectTab != null) onSelectTab!(1);

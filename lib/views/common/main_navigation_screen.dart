@@ -32,7 +32,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   Widget build(BuildContext context) {
     final auth = context.watch<AuthProvider>();
 
-    // Dynamic Tab 1 (Dashboard)
+    // Dynamic Tab 0 (Dashboard)
     Widget dashboardWidget;
     if (auth.isSuperAdmin) {
       dashboardWidget = const SuperAdminDashboard();
@@ -62,8 +62,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     }
 
     final pages = [
-      const AlmsCalendarScreen(), // Tab 0: Alms Calendar (Primary requested feature)
-      dashboardWidget, // Tab 1: Role Dashboard
+      dashboardWidget, // Tab 0: Role Dashboard (Left-most)
+      const AlmsCalendarScreen(), // Tab 1: Alms Calendar
       middleWidget, // Tab 2: Contributors / Temples / My Alms
       const SettingsScreen(), // Tab 3: Settings & Role Switcher
     ];
@@ -81,14 +81,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         unselectedItemColor: AppColors.textSecondary,
         items: [
           BottomNavigationBarItem(
-            icon: const Icon(Icons.calendar_month_outlined),
-            activeIcon: const Icon(Icons.calendar_month),
-            label: context.tr('tab_calendar'),
-          ),
-          BottomNavigationBarItem(
             icon: const Icon(Icons.dashboard_outlined),
             activeIcon: const Icon(Icons.dashboard),
             label: context.tr('tab_dashboard'),
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.calendar_month_outlined),
+            activeIcon: const Icon(Icons.calendar_month),
+            label: context.tr('tab_calendar'),
           ),
           BottomNavigationBarItem(
             icon: Icon(middleTabIcon),

@@ -148,7 +148,7 @@ class TempleAdminDashboard extends StatelessWidget {
                   icon: Icons.calendar_month,
                   color: AppColors.saffronPrimary,
                   onTap: () {
-                    if (onNavigateTab != null) onNavigateTab!(0);
+                    if (onNavigateTab != null) onNavigateTab!(1);
                   },
                 ),
               ),
