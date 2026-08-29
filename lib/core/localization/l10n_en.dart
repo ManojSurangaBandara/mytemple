@@ -1,6 +1,6 @@
 final Map<String, String> enStrings = {
   // App Title & General
-  'app_title': 'MyTemple',
+  'app_title': 'My Temple',
   'app_subtitle': 'Buddhist Temple & Alms Management',
   'welcome': 'Welcome',
   'save': 'Save',

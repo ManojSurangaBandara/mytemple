@@ -9,6 +9,7 @@ import '../contributor/my_alms_screen.dart';
 import '../super_admin/super_admin_dashboard.dart';
 import '../temple_admin/manage_contributors_screen.dart';
 import '../temple_admin/temple_admin_dashboard.dart';
+import 'app_drawer.dart';
 import 'settings_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
@@ -68,6 +69,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     ];
 
     return Scaffold(
+      drawer: AppDrawer(onSelectTab: _onTabTapped),
       body: IndexedStack(
         index: _currentIndex,
         children: pages,

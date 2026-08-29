@@ -39,7 +39,7 @@ class MyTempleApp extends StatelessWidget {
     final languageProvider = context.watch<LanguageProvider>();
 
     return MaterialApp(
-      title: 'MyTemple - අපේ පන්සල',
+      title: 'My Temple - අපේ පන්සල',
       debugShowCheckedModeBanner: false,
       locale: languageProvider.locale,
       supportedLocales: AppLocalizations.supportedLocales,
